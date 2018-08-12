@@ -102,7 +102,13 @@ function customer() {
                 var totalPrice = chosenItem.price * Number(answer.amount);
                 var newQuantity = chosenItem.stock_quantity - Number(answer.amount);
                 console.log("Your total price is " + totalPrice);
-                connection.query("UPDATE bamazon.products SET ? WHERE ?", [{ stock_quantity: newQuantity }, { id: chosenItem.id }], function(err) {
+                connection.query("UPDATE bamazon.products SET ?, ? WHERE ?", [{
+                    stock_quantity: newQuantity
+                }, {
+                    product_sales: totalPrice
+                }, {
+                    id: chosenItem.id
+                }], function(err) {
                     if (err) throw err;
                     console.log("Thank you for your purchase. Now we have " + newQuantity + " of " + chosenItem.product_name + " in stock.")
                     role();
@@ -241,6 +247,7 @@ function addNewProduct() {
     })
 };
 
+
 function quit() {
     connection.end();
-}
+};
