@@ -43,7 +43,7 @@ function role() {
         name: "role",
         type: "list",
         message: "What is your role?",
-        choices: ["Customer", "Manager", "Supervisor", "Quit"]
+        choices: ["Customer", "Manager", "Quit"]
     }).then(function(answer) {
         switch (answer.role.toLowerCase()) {
             case "customer":
@@ -52,10 +52,6 @@ function role() {
 
             case "manager":
                 manager();
-                break;
-
-            case "supervisor":
-                supervisor();
                 break;
 
             case "quit":
