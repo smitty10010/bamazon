@@ -45,7 +45,7 @@ Once you have selected the item you can purchase it.
 
 If you end up trying to purchase more than what is currently available then you will recieve a message that you cannot purchase that many items.
 
-![Low Inventory](/images/customer_lowinventory.JPH)
+![Low Inventory](/images/customer_lowinventory.JPG)
 
 
 If you chose the Manager role then you are presented with a different list of options.
