@@ -111,7 +111,7 @@ function customer() {
                 });
 
             } else {
-                console.log("I'm sorry we only have " + chosenItem.stock_quantity + " of " + chosenItem.product_name + " in stock, please chose another amount.")
+                console.log("I'm sorry we only have " + chosenItem.stock_quantity + " of " + chosenItem.product_name + " in stock, please choose another amount.")
                 customer();
             }
         })
